@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* border: 1px solid white; */
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container input {
+  width: 80%;
+  height: 10%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.container .tombol {
+  padding: 10px;
+  width: 90%;
+  height: 80%; ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 1px 5px white;
+  border-radius: 5px;
+}
+
+.container .tombol .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+
+}
+
+.container .tombol .row .key {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.container .tombol .row .wide-backspace {
+  width: 120px;
+}
+
+.container .tombol .row .wide-tab {
+  width: 95px;
+}
+
+.container .tombol .row .wide-cap {
+  width: 120px;
+}
+
+.container .tombol .row .wide-enter {
+  width: 150px;
+}
+
+.container .tombol .row .wide-shift {
+  width: 150px;
+}
+
+.container .tombol .row .wide-shift-2 {
+  width: 120px;
+}
+
+.container .tombol .row .wide-space {
+  width: 440px;
+}
+
+
+
