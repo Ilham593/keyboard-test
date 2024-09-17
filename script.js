@@ -1,10 +1,17 @@
 const huruf = document.querySelectorAll('.key'); // Elemen keyboard virtual di layar
+const input = document.getElementById('hasil')
+const label_clear = document.getElementById('label-clear')
 
+label_clear.addEventListener('click', function(){
+  input.value = ''
+})
 window.addEventListener('keydown', function(e) {
   huruf.forEach(button => {
     if (button.textContent.toLowerCase() === e.key.toLowerCase()) {
+
       // Jika tombol yang ditekan cocok dengan teks di tombol virtual (case-insensitive)
       handle(button); // Tambahkan kelas 'aktif' ke tombol yang sesuai
+      input.value += button.textContent;
     } else if (e.key === "Escape") {
       console.log("Escape key pressed");
       handleSpecialButton('Escape');
@@ -14,7 +21,7 @@ window.addEventListener('keydown', function(e) {
     } else if (e.key === "Enter") {
       console.log("Enter key pressed");
       handleSpecialButton('Enter');
-    }
+    } 
     // Tambahkan pengecekan tombol lainnya seperti Shift, Alt, dll.
   });
 });
