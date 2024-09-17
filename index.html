@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="style.css" />
     <style>
       .aktif {
-        background-color: #861a1a;
+        font-size: 20px;
+        text-transform: uppercase;
+        background-color: #2cdf08;
         color: #000;
+        font-weight: bold;
+        transform: scale(0.5);
+        transition: 0.5s;
       }
 
       .spesial {  
@@ -18,7 +23,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div id="container" class="container">
       <div class="tombol">
         <label id="label-clear" for=""> clear
           <input id="hasil" type="text" placeholder="texr akan muncul disini" />
@@ -107,6 +112,12 @@
           <button class="key">bawah</button>
           <button class="key">kanan</button>
          </div>
+      </div>
+    </div>
+
+    <div class="warning">
+      <div class="warning-none">
+        <p>silakan buka di layar lebih dari 800px 🗿 </p>
       </div>
     </div>
     <script src="script.js"></script>
