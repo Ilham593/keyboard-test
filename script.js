@@ -1,39 +1,9 @@
-const huruf = document.querySelectorAll('.key'); // Elemen keyboard virtual di layar
-const input = document.getElementById('hasil')
-const label_clear = document.getElementById('label-clear')
+const huruf = document.querySelectorAll('.key'); 
 
-label_clear.addEventListener('click', function(){
-  input.value = ''
-})
-
-window.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function(e) {
   huruf.forEach(button => {
     if (button.textContent.toLowerCase() === e.key.toLowerCase()) {
-
-      // Jika tombol yang ditekan cocok dengan teks di tombol virtual (case-insensitive)
-      handle(button); // Tambahkan kelas 'aktif' ke tombol yang sesuai
-      input.value += button.textContent;
-    } else if (e.key === "Escape") {
-      console.log("Escape key pressed");
-      handleSpecialButton('Escape');
-    } else if (e.key === "Control") {
-      console.log("Control key pressed");
-      handleSpecialButton('Control');
-    } else if (e.key === "Enter") {
-      console.log("Enter key pressed");
-      handleSpecialButton('Enter');
-    } 
-    // Tambahkan pengecekan tombol lainnya seperti Shift, Alt, dll.
-  });
-});
-
-
-window.addEventListener('keyup', function(e) {
-  huruf.forEach(button => {
-    if (button.textContent.toLowerCase() === e.key.toLowerCase()) {
-
-      // Jika tombol yang ditekan cocok dengan teks di tombol virtual (case-insensitive)
-      handle(button); // Tambahkan kelas 'aktif' ke tombol yang sesuai
+      handle(button); 
       input.value += button.textContent;
     } else if (e.key === "Escape") {
       console.log("Escape key pressed");
@@ -47,6 +17,27 @@ window.addEventListener('keyup', function(e) {
     } 
   });
 });
+
+
+document.addEventListener('keyup', function(e) {
+  huruf.forEach(button => {
+    if (button.textContent.toLowerCase() === e.key.toLowerCase()) {
+      handle(button); 
+      input.value += button.textContent;
+    } else if (e.key === "Escape") {
+      console.log("Escape key pressed");
+      handleSpecialButton('Escape');
+    } else if (e.key === "Control") {
+      console.log("Control key pressed");
+      handleSpecialButton('Control');
+    } else if (e.key === "Enter") {
+      console.log("Enter key pressed");
+      handleSpecialButton('Enter');
+    } 
+  });
+});
+
+
 
 
 
@@ -75,3 +66,5 @@ window.addEventListener('DOMContentLoaded', function(){
 
   }
 })
+
+
